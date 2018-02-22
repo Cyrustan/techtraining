@@ -1,0 +1,32 @@
+server:
+  rootPath: /api/
+  requestLog:
+      appenders:
+        - type: console
+  applicationConnectors:
+    - type: http
+      port: 5000
+  adminConnectors:
+    - type: http
+      port: 5005
+
+database:
+  driverClass: com.mysql.cj.jdbc.Driver
+  user: <username_goes_here>
+  password: <password_goes_here>
+  url: jdbc:mysql://<hostname>:<port>/<schema_name>?autoConnect=true
+  properties:
+    charset: UTF-8
+    hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  validationQuery: <validation_query>
+  logValidationErrors: true
+  checkConnectionOnConnect: true
+  checkConnectionOnBorrow: true
+  checkConnectionOnReturn: true
+  validationQueryTimeout: 5s
+  maxWaitForConnection: 3s
+  minSize: 5
+  maxSize: 20
+  checkConnectionWhileIdle: false
+  evictionInterval: 10s
+  minIdleTime: 1 minute

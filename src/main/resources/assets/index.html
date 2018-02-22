@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Portfolio App</title>
+        <meta name="author" content="SitePoint">
+
+        <link rel="stylesheet" href="./app/style/styles.css">
+
+    </head>
+
+    <body ng-app="my_app">
+        <div ng-controller="MainController">
+            Insert investor name:  <input type="text" ng-model="investorName">
+
+            <button ng-click="getInvestor()">Get</button>
+            <hr>
+
+            <p>Investor ID: <input type="text" ng-model="investorID"></p>
+            <p>Investor Address: <input type="text" ng-model="investorAddress"></p>
+            <p>Investor SSN: <input type="text" ng-model="investorSSN"></p>
+            <button ng-click="update()">Update</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="./app/js/app.js"></script>
+    </body>
+</html>
